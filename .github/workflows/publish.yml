@@ -1,0 +1,96 @@
+name: Publish to NPM
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  publish:
+    name: Publish Package
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'pnpm'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run linting
+        run: pnpm lint
+
+      - name: Run type checking
+        run: pnpm typecheck
+
+      - name: Build package
+        run: pnpm build
+
+      - name: Run bundle size check
+        run: pnpm run size
+
+      - name: Extract version from tag
+        id: extract_version
+        run: |
+          TAG=${GITHUB_REF#refs/tags/}
+          VERSION=${TAG#v}
+          echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
+          echo "TAG=$TAG" >> $GITHUB_OUTPUT
+
+      - name: Verify package version matches tag
+        run: |
+          PKG_VERSION=$(node -p "require('./package.json').version")
+          if [ "$PKG_VERSION" != "${{ steps.extract_version.outputs.VERSION }}" ]; then
+            echo "❌ package.json version ($PKG_VERSION) doesn't match tag (${{ steps.extract_version.outputs.VERSION }})"
+            exit 1
+          fi
+          echo "✅ Version match: $PKG_VERSION"
+
+      - name: Publish to NPM
+        run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Create GitHub Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.extract_version.outputs.TAG }}
+          release_name: Release ${{ steps.extract_version.outputs.TAG }}
+          body: |
+            ## @flint/ui ${{ steps.extract_version.outputs.VERSION }}
+
+            ### Installation
+            ```bash
+            npm install @flint/ui@${{ steps.extract_version.outputs.VERSION }}
+            ```
+
+            ### Links
+            - 📦 [NPM Package](https://www.npmjs.com/package/@flint/ui)
+            - 📚 [Documentation](https://docs.flint-ui.com)
+            - 🎨 [Demo](https://demo.flint-ui.com)
+            - 📖 [Storybook](https://flint-organization.github.io/flint-ui)
+          draft: false
+          prerelease: false
+
+      - name: Post-publish notification
+        run: |
+          echo "✅ Successfully published @flint/ui@${{ steps.extract_version.outputs.VERSION }} to NPM!"
+          echo "📦 Package URL: https://www.npmjs.com/package/@flint/ui"
