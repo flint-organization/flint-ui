@@ -29,6 +29,8 @@ Built on Radix UI primitives, styled with Tailwind CSS, and animated with Framer
 
 ## 📦 Installation
 
+### From NPM (Recommended)
+
 ```bash
 # npm
 npm install @flint-org/ui framer-motion tailwindcss
@@ -38,6 +40,12 @@ pnpm add @flint-org/ui framer-motion tailwindcss
 
 # yarn
 yarn add @flint-org/ui framer-motion tailwindcss
+```
+
+### From GitHub Packages
+
+```bash
+npm install @flint-org/ui --registry=https://npm.pkg.github.com
 ```
 
 ### Peer Dependencies
