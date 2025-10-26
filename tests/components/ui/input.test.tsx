@@ -294,7 +294,7 @@ describe('Input', () => {
     it('should work as controlled component', async () => {
       const ControlledInput = () => {
         const [value, setValue] = React.useState('controlled')
-        return <Input value={value} onChange={(e) => setValue(e.target.value)} />
+        return <Input value={value} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValue(e.target.value)} />
       }
 
       const user = userEvent.setup()

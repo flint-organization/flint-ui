@@ -61,7 +61,7 @@ describe('Textarea', () => {
         return (
           <Textarea
             value={value}
-            onChange={(e) => setValue(e.target.value)}
+            onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setValue(e.target.value)}
             data-testid="textarea"
           />
         )

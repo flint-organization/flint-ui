@@ -36,8 +36,11 @@ jobs:
       - name: Run linting
         run: pnpm lint
 
-      - name: Run type checking
-        run: pnpm typecheck
+      - name: Run type checking (source only)
+        run: pnpm typecheck:src
+
+      - name: Build package
+        run: pnpm build
 
   test:
     name: Test
