@@ -52,7 +52,20 @@ function generateEntryPoints() {
 export default defineConfig({
   entry: generateEntryPoints(),
   format: ['cjs', 'esm'],
-  dts: true,
+  dts: {
+    resolve: true,
+    tsconfig: './tsconfig.src.json',
+    compilerOptions: {
+      jsx: 'react-jsx',
+      moduleResolution: 'bundler',
+      skipLibCheck: true,
+      types: [], // Prevent auto-loading of @types packages
+      baseUrl: './src',
+      paths: {
+        '@/*': ['./*'],
+      },
+    },
+  },
   splitting: false,
   sourcemap: true,
   clean: true,
@@ -68,6 +81,11 @@ export default defineConfig({
     'date-fns',
     'react-day-picker',
   ],
+  esbuildOptions(options) {
+    options.alias = {
+      '@': path.resolve(__dirname, './src'),
+    };
+  },
   minify: true,
   treeshake: true,
   target: 'es2020',

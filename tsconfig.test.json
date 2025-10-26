@@ -1,0 +1,62 @@
+{
+  "compilerOptions": {
+    // Type Checking (inherit from tsconfig.src.json)
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+
+    // Modules
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": false,
+
+    // Emit (tests don't emit)
+    "noEmit": true,
+
+    // JavaScript Support
+    "allowJs": true,
+    "checkJs": false,
+
+    // Interop Constraints
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+
+    // Language and Environment
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+
+    // Skip type checking of declaration files
+    "skipLibCheck": true,
+
+    // Test-specific types
+    "types": ["vitest/globals", "@testing-library/jest-dom"],
+
+    // Path Mapping (same as src for imports to work)
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+
+    // Project References
+    "composite": true
+  },
+  "include": [
+    "tests/**/*.ts",
+    "tests/**/*.tsx",
+    "vitest.config.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "references": [
+    { "path": "./tsconfig.src.json" }
+  ]
+}

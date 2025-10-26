@@ -324,7 +324,9 @@
     "build": "tsup",
     "dev": "tsup --watch",
     "lint": "eslint src --ext .ts,.tsx --max-warnings 0",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsc --build",
+    "typecheck:src": "tsc --project tsconfig.src.json --noEmit",
+    "typecheck:tests": "tsc --project tsconfig.test.json --noEmit",
     "clean": "rm -rf dist",
     "prepublishOnly": "pnpm run clean && pnpm run build && pnpm run typecheck && pnpm run lint",
     "storybook": "storybook dev -p 6006",
@@ -388,7 +390,6 @@
     "@testing-library/jest-dom": "^6.1.5",
     "@testing-library/react": "^14.1.2",
     "@testing-library/user-event": "^14.5.1",
-    "@types/glob": "^9.0.0",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "@typescript-eslint/eslint-plugin": "^6.13.0",
@@ -416,5 +417,32 @@
   "engines": {
     "node": ">=18.0.0",
     "pnpm": ">=9.0.0"
-  }
+  },
+  "size-limit": [
+    {
+      "name": "Full Library (ESM)",
+      "path": "dist/index.mjs",
+      "limit": "150 KB"
+    },
+    {
+      "name": "Full Library (CJS)",
+      "path": "dist/index.js",
+      "limit": "300 KB"
+    },
+    {
+      "name": "Button Component",
+      "path": "dist/components/button.mjs",
+      "limit": "10 KB"
+    },
+    {
+      "name": "Card Component",
+      "path": "dist/components/card.mjs",
+      "limit": "10 KB"
+    },
+    {
+      "name": "DataTable Component",
+      "path": "dist/components/data-table.mjs",
+      "limit": "50 KB"
+    }
+  ]
 }
