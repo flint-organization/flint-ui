@@ -1,5 +1,3 @@
-'use client';
-
 import { motion } from 'framer-motion';
 import { Check, Copy } from 'lucide-react';
 import { useState } from 'react';
@@ -95,9 +93,9 @@ export function CodeSnippet({
                 transition={
                   animateReveal
                     ? {
-                        delay: index * 0.05,
-                        duration: 0.3,
-                      }
+                      delay: index * 0.05,
+                      duration: 0.3,
+                    }
                     : undefined
                 }
                 className="leading-relaxed"

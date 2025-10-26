@@ -1,5 +1,3 @@
-'use client';
-
 import { motion, useInView, Variants } from 'framer-motion';
 import { ReactNode, useRef } from 'react';
 
@@ -9,12 +7,12 @@ export interface ScrollRevealProps {
    * Animation variant to use
    */
   variant?:
-    | 'fadeIn'
-    | 'fadeInUp'
-    | 'fadeInDown'
-    | 'fadeInLeft'
-    | 'fadeInRight'
-    | 'scaleIn';
+  | 'fadeIn'
+  | 'fadeInUp'
+  | 'fadeInDown'
+  | 'fadeInLeft'
+  | 'fadeInRight'
+  | 'scaleIn';
   /**
    * Delay before animation starts (in seconds)
    */

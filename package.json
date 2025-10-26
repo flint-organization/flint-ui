@@ -333,8 +333,8 @@
     "size:why": "size-limit --why"
   },
   "peerDependencies": {
-    "react": ">=18.0.0",
-    "react-dom": ">=18.0.0"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "peerDependenciesMeta": {
     "framer-motion": {
@@ -390,6 +390,8 @@
     "eslint-config-prettier": "^9.1.0",
     "glob": "^11.0.3",
     "postcss": "^8.4.32",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "size-limit": "^11.0.0",
     "storybook": "^7.6.6",
     "tailwindcss": "^3.4.0",
