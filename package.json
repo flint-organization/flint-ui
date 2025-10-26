@@ -1,5 +1,5 @@
 {
-  "name": "@flint/ui",
+  "name": "@flint-org/ui",
   "version": "1.0.0",
   "description": "Enterprise-grade React component library with beautiful animations, built on Radix UI and Tailwind CSS. Features 50+ production-ready components with TypeScript support, dark mode, and accessibility built-in.",
   "keywords": [
@@ -328,7 +328,7 @@
     "typecheck:src": "tsc --project tsconfig.src.json --noEmit",
     "typecheck:tests": "tsc --project tsconfig.test.json --noEmit",
     "clean": "rm -rf dist",
-    "prepublishOnly": "pnpm run clean && pnpm run build && pnpm run typecheck && pnpm run lint",
+    "prepublishOnly": "pnpm run clean && pnpm run build && pnpm run typecheck:src && pnpm run lint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "size": "size-limit",

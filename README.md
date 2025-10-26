@@ -1,10 +1,10 @@
-# @flint/ui
+# @flint-org/ui
 
-[![NPM Version](https://img.shields.io/npm/v/@flint/ui?style=flat&colorA=000000&colorB=000000)](https://www.npmjs.com/package/@flint/ui)
-[![NPM Downloads](https://img.shields.io/npm/dm/@flint/ui?style=flat&colorA=000000&colorB=000000)](https://www.npmjs.com/package/@flint/ui)
+[![NPM Version](https://img.shields.io/npm/v/@flint-org/ui?style=flat&colorA=000000&colorB=000000)](https://www.npmjs.com/package/@flint-org/ui)
+[![NPM Downloads](https://img.shields.io/npm/dm/@flint-org/ui?style=flat&colorA=000000&colorB=000000)](https://www.npmjs.com/package/@flint-org/ui)
 [![CI](https://github.com/flint-organtization/flint-ui/workflows/CI/badge.svg)](https://github.com/flint-organtization/flint-ui/actions/workflows/ci.yml)
-[![Bundle Size](https://img.shields.io/bundlephobia/minzip/@flint/ui?style=flat&colorA=000000&colorB=000000)](https://bundlephobia.com/package/@flint/ui)
-[![License](https://img.shields.io/npm/l/@flint/ui?style=flat&colorA=000000&colorB=000000)](https://github.com/flint-organtization/flint-ui/blob/main/LICENSE)
+[![Bundle Size](https://img.shields.io/bundlephobia/minzip/@flint-org/ui?style=flat&colorA=000000&colorB=000000)](https://bundlephobia.com/package/@flint-org/ui)
+[![License](https://img.shields.io/npm/l/@flint-org/ui?style=flat&colorA=000000&colorB=000000)](https://github.com/flint-organtization/flint-ui/blob/main/LICENSE)
 
 > **Enterprise-grade React component library with beautiful, pre-animated components**
 
@@ -31,13 +31,13 @@ Built on Radix UI primitives, styled with Tailwind CSS, and animated with Framer
 
 ```bash
 # npm
-npm install @flint/ui framer-motion tailwindcss
+npm install @flint-org/ui framer-motion tailwindcss
 
 # pnpm
-pnpm add @flint/ui framer-motion tailwindcss
+pnpm add @flint-org/ui framer-motion tailwindcss
 
 # yarn
-yarn add @flint/ui framer-motion tailwindcss
+yarn add @flint-org/ui framer-motion tailwindcss
 ```
 
 ### Peer Dependencies
@@ -56,7 +56,7 @@ The library requires these peer dependencies:
 ### 1. Install the package
 
 ```bash
-pnpm add @flint/ui framer-motion tailwindcss
+pnpm add @flint-org/ui framer-motion tailwindcss
 ```
 
 ### 2. Import CSS
@@ -64,7 +64,7 @@ pnpm add @flint/ui framer-motion tailwindcss
 Add to your root layout or `_app.tsx`:
 
 ```typescript
-import '@flint/ui/styles';
+import '@flint-org/ui/styles';
 ```
 
 ### 3. Configure Tailwind (Optional but recommended)
@@ -73,14 +73,14 @@ Use our preset for the full experience:
 
 ```javascript
 // tailwind.config.js
-import flintPreset from '@flint/ui/preset';
+import flintPreset from '@flint-org/ui/preset';
 
 export default {
   presets: [flintPreset],
   content: [
     './app/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
-    './node_modules/@flint/ui/dist/**/*.js',
+    './node_modules/@flint-org/ui/dist/**/*.js',
   ],
 };
 ```
@@ -88,7 +88,7 @@ export default {
 ### 4. Use components
 
 ```tsx
-import { Button, Card, AnimatedCounter } from '@flint/ui';
+import { Button, Card, AnimatedCounter } from '@flint-org/ui';
 
 export default function App() {
   return (
@@ -105,7 +105,7 @@ export default function App() {
 
 ## 📦 Import Strategies
 
-@flint/ui supports multiple import patterns to optimize your bundle size. Choose based on your needs:
+@flint-org/ui supports multiple import patterns to optimize your bundle size. Choose based on your needs:
 
 ### ⚡ Optimized Imports (Recommended for Production)
 
@@ -113,21 +113,21 @@ Import only what you need for the smallest bundle sizes:
 
 ```tsx
 // UI Primitives (~1-2KB each)
-import { Button } from '@flint/ui/button';
-import { Card } from '@flint/ui/card';
-import { Input } from '@flint/ui/input';
+import { Button } from '@flint-org/ui/button';
+import { Card } from '@flint-org/ui/card';
+import { Input } from '@flint-org/ui/input';
 
 // Custom Components
-import { DataTable } from '@flint/ui/data-table';  // ~10KB (includes TanStack Table)
-import { Navbar } from '@flint/ui/navbar';
+import { DataTable } from '@flint-org/ui/data-table';  // ~10KB (includes TanStack Table)
+import { Navbar } from '@flint-org/ui/navbar';
 
 // Animated Components
-import { AnimatedCounter } from '@flint/ui/animated/animated-counter';  // ~15KB (includes Framer Motion)
-import { TiltCard } from '@flint/ui/animated/tilt-card';
+import { AnimatedCounter } from '@flint-org/ui/animated/animated-counter';  // ~15KB (includes Framer Motion)
+import { TiltCard } from '@flint-org/ui/animated/tilt-card';
 
 // Utilities & Hooks
-import { cn } from '@flint/ui/utils';
-import { useToast } from '@flint/ui/hooks';
+import { cn } from '@flint-org/ui/utils';
+import { useToast } from '@flint-org/ui/hooks';
 ```
 
 ### 🚀 Convenience Import (Quick Start/Prototyping)
@@ -136,22 +136,22 @@ Import from the main entry for faster development:
 
 ```tsx
 // Full bundle (~76KB) - includes all components
-import { Button, Card, Input, DataTable, AnimatedCounter } from '@flint/ui';
+import { Button, Card, Input, DataTable, AnimatedCounter } from '@flint-org/ui';
 ```
 
 ### 📊 Bundle Size Comparison
 
 | Import Method | Bundle Size | Use Case |
 |---------------|-------------|----------|
-| `@flint/ui/button` | **~1.9KB** | ✅ Production (97% smaller!) |
-| `@flint/ui/data-table` | **~10KB** | Complex data tables |
-| `@flint/ui/animated/counter` | **~15KB** | Animated components |
-| `@flint/ui` (barrel) | **~76KB** | Quick prototyping |
+| `@flint-org/ui/button` | **~1.9KB** | ✅ Production (97% smaller!) |
+| `@flint-org/ui/data-table` | **~10KB** | Complex data tables |
+| `@flint-org/ui/animated/counter` | **~15KB** | Animated components |
+| `@flint-org/ui` (barrel) | **~76KB** | Quick prototyping |
 
 ### 🎯 Best Practices
 
-1. **Production apps**: Use individual imports (`@flint/ui/button`)
-2. **Prototypes/demos**: Use barrel import (`@flint/ui`)
+1. **Production apps**: Use individual imports (`@flint-org/ui/button`)
+2. **Prototypes/demos**: Use barrel import (`@flint-org/ui`)
 3. **Animated components**: Only import when you need animations
 4. **Tree-shaking**: Works automatically with individual imports
 5. **Next.js App Router**: Add `"use client"` to your page/component if needed
@@ -161,9 +161,9 @@ import { Button, Card, Input, DataTable, AnimatedCounter } from '@flint/ui';
 ```tsx
 'use client';
 
-import { Button } from '@flint/ui/button';
-import { Card, CardHeader, CardTitle, CardContent } from '@flint/ui/card';
-import { cn } from '@flint/ui/utils';
+import { Button } from '@flint-org/ui/button';
+import { Card, CardHeader, CardTitle, CardContent } from '@flint-org/ui/card';
+import { cn } from '@flint-org/ui/utils';
 
 export default function Dashboard() {
   return (
@@ -259,7 +259,7 @@ Override CSS variables to match your brand:
 ### Basic Button
 
 ```tsx
-import { Button } from '@flint/ui';
+import { Button } from '@flint-org/ui';
 
 <Button variant="default" size="md">
   Click me
@@ -269,7 +269,7 @@ import { Button } from '@flint/ui';
 ### Data Table
 
 ```tsx
-import { DataTable } from '@flint/ui';
+import { DataTable } from '@flint-org/ui';
 
 const columns = [
   { accessorKey: 'name', header: 'Name' },
@@ -282,7 +282,7 @@ const columns = [
 ### Animated Counter
 
 ```tsx
-import { AnimatedCounter } from '@flint/ui';
+import { AnimatedCounter } from '@flint-org/ui';
 
 <AnimatedCounter
   value={45231}
@@ -294,7 +294,7 @@ import { AnimatedCounter } from '@flint/ui';
 ### Scroll Reveal Animation
 
 ```tsx
-import { ScrollReveal } from '@flint/ui';
+import { ScrollReveal } from '@flint-org/ui';
 
 <ScrollReveal variant="fadeInUp">
   <Card>Content appears on scroll</Card>
@@ -309,7 +309,7 @@ import { ScrollReveal } from '@flint/ui';
 
 ```tsx
 // app/layout.tsx
-import '@flint/ui/styles';
+import '@flint-org/ui/styles';
 
 export default function RootLayout({ children }) {
   return (
@@ -324,7 +324,7 @@ export default function RootLayout({ children }) {
 
 ```tsx
 // _app.tsx
-import '@flint/ui/styles';
+import '@flint-org/ui/styles';
 
 export default function App({ Component, pageProps }) {
   return <Component {...pageProps} />;
@@ -335,7 +335,7 @@ export default function App({ Component, pageProps }) {
 
 ```tsx
 // main.tsx
-import '@flint/ui/styles';
+import '@flint-org/ui/styles';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 
@@ -349,7 +349,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(<App />);
 All components are fully typed:
 
 ```typescript
-import { ButtonProps, CardProps } from '@flint/ui';
+import { ButtonProps, CardProps } from '@flint-org/ui';
 
 const MyButton: React.FC<ButtonProps> = (props) => {
   return <Button {...props} />;
@@ -368,7 +368,7 @@ The library is optimized for production:
 
 Check your bundle with:
 ```bash
-npx bundlephobia @flint/ui
+npx bundlephobia @flint-org/ui
 ```
 
 ---
@@ -477,7 +477,7 @@ Built with amazing open-source tools:
 
 ## 🔗 Links
 
-- 📦 [NPM Package](https://www.npmjs.com/package/@flint/ui)
+- 📦 [NPM Package](https://www.npmjs.com/package/@flint-org/ui)
 - 📚 [Documentation](https://docs.flint-ui.com)
 - 🎨 [Live Demo](https://demo.flint-ui.com)
 - 📖 [Storybook](https://flint-organtization.github.io/flint-ui)
