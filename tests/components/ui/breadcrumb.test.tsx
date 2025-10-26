@@ -239,7 +239,7 @@ describe('Breadcrumb', () => {
     })
 
     it('should have role="presentation"', () => {
-      const { container } = render(
+      render(
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbSeparator data-testid="separator" />

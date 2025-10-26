@@ -149,7 +149,6 @@ describe('Tooltip', () => {
     })
 
     it('should show tooltip on focus', async () => {
-      const user = userEvent.setup()
       render(
         <TooltipProvider>
           <Tooltip>
