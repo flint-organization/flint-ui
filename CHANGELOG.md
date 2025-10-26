@@ -9,14 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Coming in v1.1.0
-- Week 2 components: Tooltip, Alert, Sheet, Breadcrumb, RadioGroup, Slider, Accordion, Command
-- Week 3 components: Combobox, DatePicker, Form, Stepper, Timeline, Menu, NumberInput
-- Week 4 components: FileUpload, MultiSelect, Carousel, Rating, Tree, ContextMenu, ScrollArea
+### Coming Soon
+- Additional components and features
+- Enhanced documentation
+- More examples and templates
 
 ---
 
-## [1.0.0] - 2024-10-26
+## [0.0.1] - 2024-10-27
 
 ### Added - Initial Release 🚀
 
@@ -113,7 +113,8 @@ We follow [Semantic Versioning](https://semver.org/):
 
 ### Release Types
 
-- **Stable:** Production-ready releases (v1.0.0, v1.1.0)
+- **Pre-1.0:** Initial development releases (v0.x.x)
+- **Stable:** Production-ready releases (v1.0.0+)
 - **Beta:** Feature-complete, testing phase (v1.0.0-beta.1)
 - **Alpha:** Early preview, experimental (v1.0.0-alpha.1)
 
@@ -121,16 +122,16 @@ We follow [Semantic Versioning](https://semver.org/):
 
 ## Migration Guides
 
-### From v0.x to v1.0
+### Initial Release (v0.0.1)
 
-This is the initial stable release. No migration needed.
+This is the first release. No migration needed.
 
 ---
 
 ## Links
 
 - [NPM Package](https://www.npmjs.com/package/@flint-org/ui)
-- [GitHub Repository](https://github.com/flint-organtization/flint-ui)
+- [GitHub Repository](https://github.com/flint-organization/flint-ui)
 - [Documentation](https://docs.flint-ui.com)
-- [Storybook](https://flint-organtization.github.io/flint-ui)
-- [Issues](https://github.com/flint-organtization/flint-ui/issues)
+- [Storybook](https://flint-organization.github.io/flint-ui)
+- [Issues](https://github.com/flint-organization/flint-ui/issues)

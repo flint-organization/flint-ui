@@ -2,9 +2,9 @@
 
 [![NPM Version](https://img.shields.io/npm/v/@flint-org/ui?style=flat&colorA=000000&colorB=000000)](https://www.npmjs.com/package/@flint-org/ui)
 [![NPM Downloads](https://img.shields.io/npm/dm/@flint-org/ui?style=flat&colorA=000000&colorB=000000)](https://www.npmjs.com/package/@flint-org/ui)
-[![CI](https://github.com/flint-organtization/flint-ui/workflows/CI/badge.svg)](https://github.com/flint-organtization/flint-ui/actions/workflows/ci.yml)
+[![CI](https://github.com/flint-organization/flint-ui/workflows/CI/badge.svg)](https://github.com/flint-organization/flint-ui/actions/workflows/ci.yml)
 [![Bundle Size](https://img.shields.io/bundlephobia/minzip/@flint-org/ui?style=flat&colorA=000000&colorB=000000)](https://bundlephobia.com/package/@flint-org/ui)
-[![License](https://img.shields.io/npm/l/@flint-org/ui?style=flat&colorA=000000&colorB=000000)](https://github.com/flint-organtization/flint-ui/blob/main/LICENSE)
+[![License](https://img.shields.io/npm/l/@flint-org/ui?style=flat&colorA=000000&colorB=000000)](https://github.com/flint-organization/flint-ui/blob/main/LICENSE)
 
 > **Enterprise-grade React component library with beautiful, pre-animated components**
 
@@ -206,7 +206,7 @@ Bundle size: **~3-5KB** instead of 76KB! 🎉
 
 ## 📖 Documentation
 
-- **Storybook:** [View live examples](https://flint-organtization.github.io/flint-ui)
+- **Storybook:** [View live examples](https://flint-organization.github.io/flint-ui)
 - **Documentation:** [Read the docs](https://docs.flint-ui.com)
 - **Demo:** [See components in action](https://demo.flint-ui.com)
 - **API Reference:** Check each component's TypeScript definitions
@@ -457,7 +457,7 @@ We welcome contributions!
 
 ## 📄 License
 
-MIT © [Flint UI Team](https://github.com/flint-organtization)
+MIT © [Flint UI Team](https://github.com/flint-organization)
 
 See [LICENSE](./LICENSE) for details.
 
@@ -480,16 +480,16 @@ Built with amazing open-source tools:
 - 📦 [NPM Package](https://www.npmjs.com/package/@flint-org/ui)
 - 📚 [Documentation](https://docs.flint-ui.com)
 - 🎨 [Live Demo](https://demo.flint-ui.com)
-- 📖 [Storybook](https://flint-organtization.github.io/flint-ui)
-- 🐙 [GitHub Repository](https://github.com/flint-organtization/flint-ui)
-- 🐛 [Report Issues](https://github.com/flint-organtization/flint-ui/issues)
-- ✨ [Request Features](https://github.com/flint-organtization/flint-ui/issues/new)
+- 📖 [Storybook](https://flint-organization.github.io/flint-ui)
+- 🐙 [GitHub Repository](https://github.com/flint-organization/flint-ui)
+- 🐛 [Report Issues](https://github.com/flint-organization/flint-ui/issues)
+- ✨ [Request Features](https://github.com/flint-organization/flint-ui/issues/new)
 
 ## 📂 Related Repositories
 
-- [flint-ui](https://github.com/flint-organtization/flint-ui) - Component library source
-- [flint-demo](https://github.com/flint-organtization/flint-demo) - Comprehensive demo application
-- [flint-docs](https://github.com/flint-organtization/flint-docs) - Documentation site
+- [flint-ui](https://github.com/flint-organization/flint-ui) - Component library source
+- [flint-demo](https://github.com/flint-organization/flint-demo) - Comprehensive demo application
+- [flint-docs](https://github.com/flint-organization/flint-docs) - Documentation site
 
 ---
 

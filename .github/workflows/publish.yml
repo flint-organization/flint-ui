@@ -86,7 +86,7 @@ jobs:
             - 📦 [NPM Package](https://www.npmjs.com/package/@flint-org/ui)
             - 📚 [Documentation](https://docs.flint-ui.com)
             - 🎨 [Demo](https://demo.flint-ui.com)
-            - 📖 [Storybook](https://flint-organtization.github.io/flint-ui)
+            - 📖 [Storybook](https://flint-organization.github.io/flint-ui)
           draft: false
           prerelease: false
 

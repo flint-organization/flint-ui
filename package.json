@@ -1,6 +1,6 @@
 {
   "name": "@flint-org/ui",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Enterprise-grade React component library with beautiful animations, built on Radix UI and Tailwind CSS. Features 50+ production-ready components with TypeScript support, dark mode, and accessibility built-in.",
   "keywords": [
     "react",
@@ -27,10 +27,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/flint-organtization/flint-ui.git"
+    "url": "https://github.com/flint-organization/flint-ui.git"
   },
   "bugs": {
-    "url": "https://github.com/flint-organtization/flint-ui/issues"
+    "url": "https://github.com/flint-organization/flint-ui/issues"
   },
   "homepage": "https://docs.flint-ui.com",
   "publishConfig": {
