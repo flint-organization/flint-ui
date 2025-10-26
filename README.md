@@ -373,6 +373,70 @@ npx bundlephobia @flint/ui
 
 ---
 
+## 🧪 Testing
+
+The library includes comprehensive tests using Vitest and React Testing Library.
+
+### Running Tests
+
+```bash
+# Run tests in watch mode
+pnpm test
+
+# Run tests once (CI mode)
+pnpm test:run
+
+# Run tests with coverage
+pnpm test:coverage
+
+# Open visual test UI
+pnpm test:ui
+```
+
+### Test Coverage
+
+We maintain high test coverage for all components:
+
+- **Utilities:** 100% coverage
+- **Components:** 80%+ coverage
+- **Hooks:** 90%+ coverage
+- **Overall:** 75%+ coverage
+
+### Writing Tests
+
+Tests are located in the `tests/` folder, mirroring the `src/` structure:
+
+```
+tests/
+├── components/
+│   ├── ui/
+│   │   ├── button.test.tsx
+│   │   ├── card.test.tsx
+│   │   └── input.test.tsx
+│   └── animated/
+├── hooks/
+│   └── use-toast.test.ts
+└── lib/
+    └── utils.test.ts
+```
+
+Example test:
+
+```typescript
+import { describe, it, expect } from 'vitest'
+import { render, screen } from '../test-utils'
+import { Button } from '@/components/ui/button'
+
+describe('Button', () => {
+  it('should render with children', () => {
+    render(<Button>Click me</Button>)
+    expect(screen.getByRole('button')).toHaveTextContent('Click me')
+  })
+})
+```
+
+---
+
 ## 🤝 Contributing
 
 We welcome contributions!
@@ -382,6 +446,12 @@ We welcome contributions!
 3. Commit your changes (`git commit -m 'feat: add amazing feature'`)
 4. Push to the branch (`git push origin feat/amazing-feature`)
 5. Open a Pull Request
+
+**Please ensure:**
+- All tests pass (`pnpm test:run`)
+- Code is linted (`pnpm lint`)
+- TypeScript has no errors (`pnpm typecheck`)
+- Coverage remains above 75%
 
 ---
 
