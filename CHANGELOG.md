@@ -130,7 +130,7 @@ This is the initial stable release. No migration needed.
 ## Links
 
 - [NPM Package](https://www.npmjs.com/package/@flint/ui)
-- [GitHub Repository](https://github.com/flint-organization/flint-ui)
+- [GitHub Repository](https://github.com/flint-organtization/flint-ui)
 - [Documentation](https://docs.flint-ui.com)
-- [Storybook](https://flint-organization.github.io/flint-ui)
-- [Issues](https://github.com/flint-organization/flint-ui/issues)
+- [Storybook](https://flint-organtization.github.io/flint-ui)
+- [Issues](https://github.com/flint-organtization/flint-ui/issues)
