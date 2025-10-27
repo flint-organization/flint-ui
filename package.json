@@ -1,6 +1,6 @@
 {
   "name": "@flint-org/ui",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Enterprise-grade React component library with beautiful animations, built on Radix UI and Tailwind CSS. Features 50+ production-ready components with TypeScript support, dark mode, and accessibility built-in.",
   "keywords": [
     "react",
