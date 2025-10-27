@@ -215,8 +215,8 @@ Bundle size: **~3-5KB** instead of 76KB! 🎉
 ## 📖 Documentation
 
 - **Storybook:** [View live examples](https://flint-organization.github.io/flint-ui)
-- **Documentation:** [Read the docs](https://docs.flint-ui.com)
-- **Demo:** [See components in action](https://demo.flint-ui.com)
+- **Documentation:** [Read the docs](https://docs.flint-ui.com) _(Coming Soon)_
+- **Demo:** [See components in action](https://flint-three.vercel.app)
 - **API Reference:** Check each component's TypeScript definitions
 
 ---
@@ -486,8 +486,8 @@ Built with amazing open-source tools:
 ## 🔗 Links
 
 - 📦 [NPM Package](https://www.npmjs.com/package/@flint-org/ui)
-- 📚 [Documentation](https://docs.flint-ui.com)
-- 🎨 [Live Demo](https://demo.flint-ui.com)
+- 📚 [Documentation](https://docs.flint-ui.com) _(Coming Soon)_
+- 🎨 [Live Demo](https://flint-three.vercel.app)
 - 📖 [Storybook](https://flint-organization.github.io/flint-ui)
 - 🐙 [GitHub Repository](https://github.com/flint-organization/flint-ui)
 - 🐛 [Report Issues](https://github.com/flint-organization/flint-ui/issues)
