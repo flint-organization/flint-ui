@@ -56,7 +56,7 @@ export default defineConfig({
     resolve: true,
     tsconfig: './tsconfig.src.json',
     compilerOptions: {
-      jsx: 'react-jsx',
+      jsx: 'react-jsx',  // Modern JSX runtime for type definitions
       moduleResolution: 'bundler',
       skipLibCheck: true,
       types: [], // Prevent auto-loading of @types packages
@@ -85,8 +85,15 @@ export default defineConfig({
     options.alias = {
       '@': path.resolve(__dirname, './src'),
     };
+    // Use automatic JSX runtime (modern approach, no React import needed)
+    options.jsx = 'automatic';
+    options.jsxImportSource = 'react';
   },
-  minify: true,
+  // Add "use client" directive to all built files for Next.js App Router compatibility
+  banner: {
+    js: '"use client";',
+  },
+  minify: false,  // Temporarily disable to preserve "use client"
   treeshake: true,
   target: 'es2020',
   outDir: 'dist',

@@ -16,6 +16,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [0.0.2] - 2025-10-27
+
+### Fixed
+- **Critical:** Fix "React is not defined" error by using modern automatic JSX runtime
+- **Critical:** Fix hydration errors by adding missing `peerDependencies` for React and React DOM
+- Add `"use client"` directives to 18 components for Next.js App Router compatibility
+  - Theme & Provider: `ThemeProvider`, `ThemeSwitcher`
+  - State Management: `DataTable`, `SearchInput`, `Sidebar`, `Navbar`
+  - Animated: All 7 animated components (AnimatedCounter, ScrollReveal, TiltCard, CodeSnippet, AnimatedComponents, GradientBackground, TechBadge)
+  - Interactive: `Pagination`, `ThemeToggle`, `FilterBar`, `EmptyState`, `Calendar`
+- Add explicit React imports to 13 components to ensure proper TypeScript compilation
+- Configure tsup to use modern automatic JSX runtime (`jsx: 'automatic'`) with `react/jsx-runtime`
+- Ensures proper client-side rendering for components using React hooks, Framer Motion, and browser APIs
+- Fixes esbuild import aliasing issues that caused React reference errors
+
+### Added
+- `peerDependencies` section declaring React 18+ requirement
+- Explicit React imports (`import * as React from 'react'`) in components for TypeScript compatibility
+- Automatic JSX runtime configuration in tsup build
+
+### Changed
+- JSX compilation now uses modern automatic runtime (`jsx`/`jsxs` from 'react/jsx-runtime') instead of `React.createElement`
+- Components now properly marked for client-side execution in Next.js 13+ App Router
+- Improved compatibility with Server Components architecture and modern bundlers
+- Updated from classic to automatic JSX transform for better tree-shaking and smaller bundles
+
+---
+
 ## [0.0.1] - 2024-10-27
 
 ### Added - Initial Release 🚀

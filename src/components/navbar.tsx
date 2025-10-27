@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, type ReactNode } from 'react';
 import { Menu, X } from 'lucide-react';
 import { cn } from '../lib/utils';

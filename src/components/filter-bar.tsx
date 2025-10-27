@@ -1,3 +1,6 @@
+"use client";
+
+import * as React from 'react';
 import { X } from 'lucide-react';
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';

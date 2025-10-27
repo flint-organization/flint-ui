@@ -1,3 +1,6 @@
+"use client";
+
+import * as React from 'react';
 import { Moon, Sun, Monitor } from "lucide-react";
 import { useTheme, type ThemeVariant } from "./theme-provider";
 import { Button } from "./button";
