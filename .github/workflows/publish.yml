@@ -67,18 +67,6 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Setup Node.js for GitHub Packages
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@flint-org'
-
-      - name: Publish to GitHub Packages
-        run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Create GitHub Release
         uses: actions/create-release@v1
         env:
@@ -91,27 +79,20 @@ jobs:
 
             ### Installation
 
-            **From NPM (recommended):**
             ```bash
             npm install @flint-org/ui@${{ steps.extract_version.outputs.VERSION }}
             ```
 
-            **From GitHub Packages:**
-            ```bash
-            npm install @flint-org/ui@${{ steps.extract_version.outputs.VERSION }} --registry=https://npm.pkg.github.com
-            ```
-
             ### Links
             - 📦 [NPM Package](https://www.npmjs.com/package/@flint-org/ui)
-            - 📦 [GitHub Package](https://github.com/flint-organization/flint-ui/pkgs/npm/ui)
             - 📚 [Documentation](https://docs.flint-ui.com)
             - 🎨 [Demo](https://demo.flint-ui.com)
-            - 📖 [Storybook](https://flint-organization.github.io/flint-ui)
+            - 📖 [Storybook](https://flint-organtization.github.io/flint-ui)
           draft: false
           prerelease: false
 
       - name: Post-publish notification
         run: |
-          echo "✅ Successfully published @flint-org/ui@${{ steps.extract_version.outputs.VERSION }}!"
+          echo "✅ Successfully published @flint-org/ui@${{ steps.extract_version.outputs.VERSION }} to NPM!"
           echo "📦 NPM: https://www.npmjs.com/package/@flint-org/ui"
-          echo "📦 GitHub Packages: https://github.com/flint-organization/flint-ui/pkgs/npm/ui"
+          echo "📖 Storybook: https://flint-organtization.github.io/flint-ui"
